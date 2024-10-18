@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid #674c88;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Canvas Drawing Example</h1>
+</header>
+
+<main>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <script>
+        // Get the canvas element
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw a rectangle
+        ctx.fillStyle = 'blue'; // Set color for the rectangle
+        ctx.fillRect(50, 50, 150, 100); // Draw the rectangle (x, y, width, height)
+
+        // Draw a circle
+        ctx.beginPath(); // Start a new path
+        ctx.arc(300, 150, 50, 0, Math.PI * 2, false); // Draw the circle (x, y, radius, startAngle, endAngle, counterclockwise)
+        ctx.fillStyle = 'red'; // Set color for the circle
+        ctx.fill(); // Fill the circle with color
+    </script>
+</main>
+
+<footer>
+    <p>Contact Information: email@example.com | Phone: (123) 456-7890</p>
+</footer>
+
+</body>
+</html>
